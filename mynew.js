@@ -1,27 +1,25 @@
 // Code goes here
-
 var app= angular.module('app',[]);
 app.controller("MainController", function($scope) { 
-      $scope.name="angular"; 
-      $scope.user ="bhavya";
+      $scope.name ="Angular"; 
+      $scope.user ="Sri Bhavya";
       $scope.id = {
-          name:"Angular Class",  
+          name1:"Angular Class",  
                 day:"wed",  
-                friends:[   
-                              'Angular2',   
+                frameworks:[   
+                              'Angular',   
                                'Javascript',    
-                               'Typescript' 
+                               'sublime' 
                                ] ,
                 members:['aishu','bhavya','aakash']
                             }           
                          }); 
                          
                          
-   app.directive('userInfoCard', function(){  
+   app.directive("userInfoCard", function(){  
      return{  
-     //template:"User Info card", 
+     restrict:"E" ,
+     templateUrl: "new.html"                                                                      
      
-     templateUrl: "new.html"                                                                        
-    restrict:"E"  
-     //If you want element than E if attribute than A c:class, Ecomment     
-   }});
+      };
+  });
